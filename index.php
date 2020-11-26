@@ -25,18 +25,18 @@
 <body>
 <div class="container" id="tamanhoContainer" style="margin-top: 40px;">
     <h4>Cadastro de Produtos</h4>
-    <form action="cadastro" method="post" style="margin-top: 20px;">
+    <form action="_inserir_produto.php" method="post" style="margin-top: 20px;">
         <div class="form-group">
             <label>Cód. Produto</label>
-            <input type="number" class="form-control" placeholder="Insira o código do produto">
+            <input type="number" class="form-control" name="codprod" placeholder="Insira o código do produto" required>
         </div><!--Fim form-group -->
         <div class="form-group">
             <label>Descrição</label>
-            <input type="text" class="form-control" placeholder="Insira o nome do produto">
+            <input type="text" class="form-control" name="descprod" placeholder="Insira o nome do produto" autocomplete="off">
         </div><!--Fim form-group -->
         <div class="form-group">
             <label>Categoria</label>
-            <select class="form-control">
+            <select class="form-control" name="catprod">
                 <option>Periféricos</option>
                 <option>Hardware</option>
                 <option>Software</option>
@@ -46,11 +46,11 @@
         </div><!--Fim form-group -->
         <div class="form-group">
             <label>Quantidade</label>
-            <input type="number" class="form-control" placeholder="Insira a quantidade">
+            <input type="number" class="form-control" name="qtdprod" placeholder="Insira a quantidade">
         </div><!--Fim form-group -->
         <div class="form-group">
             <label>Fornecedor</label>
-            <select class="form-control">
+            <select class="form-control" name="fornprod">
                 <option>Pauta</option>
                 <option>Braile</option>
                 <option>Aldo</option>
@@ -64,7 +64,6 @@
         
     </form>
 </div><!--Fim container -->
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
