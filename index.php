@@ -10,11 +10,22 @@
         #tamanhoContainer {
             width: 500px;
         }
+
+        #botao1 {
+            background-color: #5A8D2F;
+            color: #FFFFFF;
+        }
+        #botao2 {
+            background-color: #BB1D03;
+            color: #FFFFFF;
+        }
+
     </style>
 </head>
 <body>
 <div class="container" id="tamanhoContainer" style="margin-top: 40px;">
-    <form action="cadastro" method="post">
+    <h4>Cadastro de Produtos</h4>
+    <form action="cadastro" method="post" style="margin-top: 20px;">
         <div class="form-group">
             <label>Cód. Produto</label>
             <input type="number" class="form-control" placeholder="Insira o código do produto">
@@ -46,8 +57,11 @@
                 <option>Solid</option>
             </select>
         </div><!--Fim form-group -->
-        <button type="submit" class="btn btn-success btn-sm">Salvar</button>
-        <button type="submit" class="btn btn-danger btn-sm">Limpar</button>
+        <div class="botoes" style="text-align: right;">
+            <button type="submit" id="botao1" class="btn btn-sm">Salvar</button>
+            <button type="submit" id="botao2" class="btn btn-sm">Limpar</button>
+        </div><!--Fim botoes -->
+        
     </form>
 </div><!--Fim container -->
 
