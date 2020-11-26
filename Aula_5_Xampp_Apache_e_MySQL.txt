@@ -1,0 +1,1 @@
+Instalamos o XAMPP que inclui o Apache, PHP e MySQL
