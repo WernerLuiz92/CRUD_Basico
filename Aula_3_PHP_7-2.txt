@@ -1,0 +1,9 @@
+Vamos utilizar a linguagem de programação PHP 7.2
+
+É uma das linguagens mais utilizadas, com mais documentação.
+
+https://www.php.net/manual/pt_BR/intro_whatis.php
+
+PHP não faz animações nas paginas
+
+ 
