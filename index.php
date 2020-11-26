@@ -3,29 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Instalado por CDN</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+    <title>Bootstrap Instalado Localmente</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
 
+<button type="button" class="btn btn-primary">Teste 1</button>
+<button type="button" class="btn btn-secondary">Teste 2</button>
+<button type="button" class="btn btn-success">Teste 3</button>
+<button type="button" class="btn btn-danger">Teste 4</button>
+<button type="button" class="btn btn-warning">Teste 5</button>
+<button type="button" class="btn btn-info">Teste 6</button>
+<button type="button" class="btn btn-light">Teste 7</button>
+<button type="button" class="btn btn-dark">Teste 8</button>
 
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Teste 9</button>
 
-<button type="button" class="btn btn-link">Link</button>
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+ <script type="text/javascript" src="js/bootstrap.js"></script>   
 </body>
-</html> 
+</html>
