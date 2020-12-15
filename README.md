@@ -14,7 +14,7 @@
     &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://projetos-werner.000webhostapp.com/">CRUD Estoque</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; #sobre-o-projeto &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; ## sobre-o-projeto &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
 <p align="center">
     <img alt="Home Page" src=".github/HomePage_Screen.png" />
