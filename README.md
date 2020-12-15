@@ -1,7 +1,7 @@
 <h1 align="center">
-    <img alt="Pitu" src=".github/icone.png" height="100px" />
-    <br>Semana Full Stack JS<br/>
-    Node.js | ReactJS | MySQL
+    <img alt="CRUD" src=".github/icone.png" height="100px" />
+    <br>CRUD - Estoque<br/>
+    PHP 7 | MySQL 8 | Bootstrap 4
 </h1>
 
 <p align="center">
