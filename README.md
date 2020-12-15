@@ -14,7 +14,12 @@
     &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://projetos-werner.000webhostapp.com/">CRUD Estoque</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; ## sobre-o-projeto &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<p align="center">
+    <a href="#bookmark-sobre-o-projeto">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#rocket-tecnologias-utilizadas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#boom-como-executar">Como Executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#memo-licença">Licença</a>
+</p>
 
 <p align="center">
     <img alt="Home Page" src=".github/HomePage_Screen.png" />
@@ -24,7 +29,7 @@
 
 O *Pitu* é uma aplicação micro-SaaS pensada para, de forma simples e fácil, encurtar e vizualizar estatíticas de uma URL.
 
-## *Mas, por que Pitu??*
+### *Mas, por que Pitu??*
 
 O Pitu é considerado o maior camarão de água doce podendo chegar a medir quase 50 centímetros, porém ele nasce muito pequeno.
 
