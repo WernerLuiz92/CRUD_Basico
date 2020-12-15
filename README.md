@@ -5,13 +5,13 @@
 </h1>
 
 <p align="center">
-    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/WernerLuiz92/URL_Shortener_Pitu?style=for-the-badge">
-    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/WernerLuiz92/URL_Shortener_Pitu?style=for-the-badge">
-    <img alt="GitHub" src="https://img.shields.io/github/license/WernerLuiz92/URL_Shortener_Pitu?style=for-the-badge"><br/>
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/WernerLuiz92/CRUD_Basico">
+    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/WernerLuiz92/CRUD_Basico">
+    <img alt="GitHub" src="https://img.shields.io/github/license/WernerLuiz92/CRUD_Basico"><br/>
 </p>
 
 <p align="center">
-    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://www.pitu.link">Pitu URL Shortener</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://projetos-werner.000webhostapp.com/">CRUD Estoque</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 <p align="center">
