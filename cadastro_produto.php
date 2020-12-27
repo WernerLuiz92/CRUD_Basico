@@ -66,11 +66,27 @@
             </div>
             <div class="form-group">
                 <label>Fornecedor</label>
-                <select class="form-control" name="forn_prod">
-                    <option>Pauta</option>
-                    <option>Braile</option>
-                    <option>Aldo</option>
-                    <option>Solid</option>
+                <select class="form-control" name="id_forn_prod">
+
+                    <?php
+                        $sql3 = "SELECT * FROM fornecedor ORDER BY nome_forn ASC";
+                        $consulta3 = mysqli_query($conexao, $sql3);
+
+                        while ($array3 = mysqli_fetch_array($consulta3)) {
+
+                            $id_forn = $array3['id_forn'];
+                            $cod_forn = $array3['cod_forn'];
+                            $razsoc_forn = $array3['razsoc_forn'];
+                            $nome_forn = $array3['nome_forn'];
+                        
+
+                        ?>
+                    <option value="<?php echo $id_forn ?>"
+                        title="<?php echo $nome_forn ?>"><?php echo "$cod_forn - $razsoc_forn" ?></option>
+                    <?php
+                        }
+                    ?>
+
                 </select>
             </div>
             <div class="botoes" style="text-align: right; width: 49%; float: right;">

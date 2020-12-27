@@ -2,7 +2,7 @@
 <?php
 
     include '_conexao.php';
-
+    
     $id = $_GET['id'];
 
 ?>
@@ -20,21 +20,21 @@
 <div>
     <div class="container" id="tamanhoContainer" style="margin-top: 40px; width: 500px;">
         <center>
-            <h4>Alteração de Cadastro</h4>
+            <h4>Tem certeza que deseja excluir este produto?</h4>
         </center>
-        <form action="_salvar_alteracao_produto.php" method="post" style="margin-top: 15px;">
+        <form action="_excluir_produto.php" method="post" style="margin-top: 20px;">
             <?php
 
-            $sql1 = "SELECT * FROM `produto` WHERE id_prod = $id";
-            $consulta1 = mysqli_query($conexao, $sql1);
+            $sql = "SELECT * FROM `produto` WHERE id_prod = $id";
+            $consulta = mysqli_query($conexao, $sql);
 
-            while ($array = mysqli_fetch_array($consulta1)) {
+            while ($array = mysqli_fetch_array($consulta)) {
                 $id_prod = $array['id_prod'];
                 $cod_prod = $array['cod_prod'];
                 $desc_prod = $array['desc_prod'];
                 $id_cat_prod = $array['id_cat_prod'];
                 $qtd_prod = $array['qtd_prod'];
-                $id_forn_prod = $array['id_forn_prod']
+                $forn_prod = $array['forn_prod']
 
         ?>
             <div class="form-group">
@@ -45,11 +45,11 @@
             </div>
             <div class="form-group">
                 <label>Descrição</label>
-                <input type="text" class="form-control" name="desc_prod" value="<?php echo $desc_prod ?>">
+                <input type="text" class="form-control" name="desc_prod" value="<?php echo $desc_prod ?>" disabled>
             </div>
             <div class="form-group">
                 <label>Categoria</label>
-                <select class="form-control" name="id_cat_prod">
+                <select class="form-control" name="id_cat_prod" disabled>
 
                     <?php
                         $sql2 = "SELECT * FROM categoria ORDER BY cod_cat";
@@ -74,38 +74,22 @@
             </div>
             <div class="form-group">
                 <label>Quantidade</label>
-                <input type="number" class="form-control" name="qtd_prod" value="<?php echo $qtd_prod ?>">
+                <input type="number" class="form-control" name="qtd_prod" value="<?php echo $qtd_prod ?>" disabled>
             </div>
             <div class="form-group">
                 <label>Fornecedor</label>
-                <select class="form-control" name="id_forn_prod">
-
-                    <?php
-                        $sql3 = "SELECT * FROM fornecedor ORDER BY nome_forn ASC";
-                        $consulta3 = mysqli_query($conexao, $sql3);
-
-                        while ($array3 = mysqli_fetch_array($consulta3)) {
-
-                            $id_forn = $array3['id_forn'];
-                            $cod_forn = $array3['cod_forn'];
-                            $razsoc_forn = $array3['razsoc_forn'];
-                            $nome_forn = $array3['nome_forn'];
-                        
-
-                        ?>
-                    <option <?php if ($id_forn_prod == $id_forn){echo 'selected ';} ?> value="<?php echo $id_forn ?>"
-                        title="<?php echo $nome_forn ?>"><?php echo "$cod_forn - $razsoc_forn" ?></option>
-                    <?php
-                        }
-                    ?>
-
+                <select class="form-control" name="forn_prod" disabled>
+                    <option <?php if ($forn_prod == 'Pauta'){echo 'selected';} ?>>Pauta</option>
+                    <option <?php if ($forn_prod == 'Braile'){echo 'selected';} ?>>Braile</option>
+                    <option <?php if ($forn_prod == 'Aldo'){echo 'selected';} ?>>Aldo</option>
+                    <option <?php if ($forn_prod == 'Solid'){echo 'selected';} ?>>Solid</option>
                 </select>
             </div>
             <div class="botoes" style="text-align: right;">
                 <a class="btn btn-sm btn-primary" href="listar_produto.php" role="button"><i
                         class="fas fa-long-arrow-alt-left"></i>&nbsp;Voltar</a>
                 <button type="submit" class="btn btn-success btn-sm"><i
-                        class="fas fa-check"></i>&nbsp;Atualizar</button>
+                        class="fas fa-check"></i>&nbsp;Confirmar</button>
             </div>
             <?php   } ?>
         </form>

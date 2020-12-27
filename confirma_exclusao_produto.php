@@ -18,11 +18,11 @@
 
 <!-- Body -->
 <div>
-    <div class="container" id="tamanhoContainer" style="margin-top: 40px; width: 500px;">
+    <div class="container" id="tamanhoContainer" style="margin-top: 20px; width: 500px;">
         <center>
             <h4>Tem certeza que deseja excluir este produto?</h4>
         </center>
-        <form action="_excluir_produto.php" method="post" style="margin-top: 20px;">
+        <form action="_excluir_produto.php" method="post" style="margin-top: 10px;">
             <?php
 
             $sql = "SELECT * FROM `produto` WHERE id_prod = $id";
@@ -34,7 +34,7 @@
                 $desc_prod = $array['desc_prod'];
                 $id_cat_prod = $array['id_cat_prod'];
                 $qtd_prod = $array['qtd_prod'];
-                $forn_prod = $array['forn_prod']
+                $id_forn_prod = $array['id_forn_prod'];
 
         ?>
             <div class="form-group">
@@ -78,11 +78,27 @@
             </div>
             <div class="form-group">
                 <label>Fornecedor</label>
-                <select class="form-control" name="forn_prod" disabled>
-                    <option <?php if ($forn_prod == 'Pauta'){echo 'selected';} ?>>Pauta</option>
-                    <option <?php if ($forn_prod == 'Braile'){echo 'selected';} ?>>Braile</option>
-                    <option <?php if ($forn_prod == 'Aldo'){echo 'selected';} ?>>Aldo</option>
-                    <option <?php if ($forn_prod == 'Solid'){echo 'selected';} ?>>Solid</option>
+                <select class="form-control" name="id_forn_prod" disabled>
+
+                    <?php
+                        $sql3 = "SELECT * FROM fornecedor ORDER BY nome_forn ASC";
+                        $consulta3 = mysqli_query($conexao, $sql3);
+
+                        while ($array3 = mysqli_fetch_array($consulta3)) {
+
+                            $id_forn = $array3['id_forn'];
+                            $cod_forn = $array3['cod_forn'];
+                            $razsoc_forn = $array3['razsoc_forn'];
+                            $nome_forn = $array3['nome_forn'];
+                        
+
+                        ?>
+                    <option <?php if ($id_forn_prod == $id_forn){echo 'selected ';} ?> value="<?php echo $id_forn ?>"
+                        title="<?php echo $nome_forn ?>"><?php echo "$cod_forn - $razsoc_forn" ?></option>
+                    <?php
+                        }
+                    ?>
+
                 </select>
             </div>
             <div class="botoes" style="text-align: right;">

@@ -3,15 +3,15 @@
 
     include '_conexao.php';
 
-    $cod_prod = $_POST['cod_prod'];
+    $id = $_POST['id_prod'];
     $desc_prod = $_POST['desc_prod'];
     $id_cat_prod = $_POST['id_cat_prod'];
     $qtd_prod = $_POST['qtd_prod'];
-    $id_forn_prod = $_POST['id_forn_prod'];
+    $forn_prod = $_POST['forn_prod'];
 
-    $sql = "INSERT INTO `produto`(`cod_prod`, `desc_prod`, `id_cat_prod`, `qtd_prod`, `id_forn_prod`) VALUES ($cod_prod,'$desc_prod','$id_cat_prod',$qtd_prod,'$id_forn_prod')";
+    $sql = "UPDATE produto SET desc_prod = '$desc_prod', id_cat_prod = '$id_cat_prod', qtd_prod = $qtd_prod, forn_prod = '$forn_prod' WHERE id_prod = $id";
 
-    $inserir = mysqli_query($conexao, $sql);
+    $atualizar = mysqli_query($conexao, $sql);
 
 ?>
 <!-- Code End -->
@@ -19,7 +19,7 @@
 <!-- Head -->
 <?php
     include 'head.php';
-    $page = 2;
+    $page = 5;
     include 'navbar.php'; 
 ?>
 <!-- Head End -->
@@ -28,8 +28,8 @@
 <div>
     <center>
         <div class="container" style="width: 500px; margin-top: 40px;">
-            <h4 style="margin-top: 20px;">Produto cadastrado com sucesso!</h4>
-            <a class="btn btn-sm btn-primary" href="cadastro_produto.php" role="button"><i
+            <h4 style="margin-top: 20px;">Produto alterado com sucesso!</h4>
+            <a class="btn btn-sm btn-primary" href="listar_produto.php" role="button"><i
                     class="fas fa-long-arrow-alt-left"></i>&nbsp;Voltar</a>
         </div>
     </center>
