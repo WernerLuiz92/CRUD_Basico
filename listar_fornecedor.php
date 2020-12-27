@@ -1,9 +1,9 @@
 <!-- Code -->
-<!--?php
+<?php
 
     include '_conexao.php';
 
-?-->
+?>
 <!-- Code End -->
 
 <!-- Head -->
@@ -23,41 +23,47 @@
             <thead>
                 <tr>
                     <th scope="col">Cód.</th>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col">Quantidade</th>
-                    <th scope="col">Fornecedor</th>
+                    <th scope="col">Razão Social</th>
+                    <th scope="col">CNPJ</th>
+                    <th scope="col">Nome Fantasia</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">E-mail</th>
                     <th scope="col">Ação</th>
                 </tr>
             </thead>
             <?php
-                        include '_conexao.php';
-                        $sql = "SELECT * FROM `produto`";
-                        $busca = mysqli_query($conexao,$sql);
+                $sql = "SELECT * FROM fornecedor";
+                $busca = mysqli_query($conexao,$sql);
 
-                        while ($array = mysqli_fetch_array($busca)) {
-                            $id_prod = $array['id_prod'];
-                            $cod_prod = $array['cod_prod'];
-                            $desc_prod = $array['desc_prod'];
-                            $cat_prod = $array['cat_prod'];
-                            $qtd_prod = $array['qtd_prod'];
-                            $forn_prod = $array['forn_prod'];
-                    ?>
+                while ($array = mysqli_fetch_array($busca)) {
+                    $id_forn = $array['id_forn'];
+                    $cod_forn = $array['cod_forn'];
+                    $razsoc_forn = $array['razsoc_forn'];
+                    $cnpj_forn = $array['cnpj_forn'];
+                    $nome_forn = $array['nome_forn'];
+                    $cidade_forn = $array['cidade_forn'];
+                    $tel_forn = $array['tel_forn'];
+                    $email_forn = $array['email_forn'];
+
+            ?>
             <tr>
-                <td><?php echo $cod_prod ?></td>
-                <td><?php echo $desc_prod ?></td>
-                <td><?php echo $cat_prod ?></td>
-                <td><?php echo $qtd_prod ?></td>
-                <td><?php echo $forn_prod ?></td>
+                <td><?php echo $cod_forn ?></td>
+                <td><?php echo $razsoc_forn ?></td>
+                <td><?php echo $cnpj_forn ?></td>
+                <td><?php echo $nome_forn ?></td>
+                <td><?php echo $cidade_forn ?></td>
+                <td><?php echo $tel_forn ?></td>
+                <td><?php echo $email_forn ?></td>
                 <td>
-                    <a class="btn btn-sm btn-outline-warning" href="editar_produto.php?id=<?php echo $id_prod ?>"
+                    <a class="btn btn-sm btn-outline-warning" href="editar_fornecedor.php?id=<?php echo $id_forn ?>"
                         role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
                     <a class="btn btn-sm btn-outline-danger"
-                        href="confirma_exclusao_produto.php?id=<?php echo $id_prod ?>" role="button"><i
+                        href="confirma_exclusao_fornecedor.php?id=<?php echo $id_forn ?>" role="button"><i
                             class="far fa-trash-alt"></i>&nbsp;Excluir</a>
                 </td>
-                <?php
-                        }
+            <?php
+                }
             ?>
             </tr>
         </table>

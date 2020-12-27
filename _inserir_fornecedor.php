@@ -3,13 +3,16 @@
 
     include '_conexao.php';
 
-    $cod_prod = $_POST['cod_prod'];
-    $desc_prod = $_POST['desc_prod'];
-    $id_cat_prod = $_POST['id_cat_prod'];
-    $qtd_prod = $_POST['qtd_prod'];
-    $forn_prod = $_POST['forn_prod'];
+    $cod_forn = $_POST['cod_forn'];
+    $razsoc_forn = $_POST['razsoc_forn'];
+    $cnpj_forn = $_POST['cnpj_forn'];
+    $nome_forn = $_POST['nome_forn'];
+    $cidade_forn = $_POST['cidade_forn'];
+    $tel_forn = $_POST['tel_forn'];
+    $email_forn = $_POST['email_forn'];
+    
 
-    $sql = "INSERT INTO `produto`(`cod_prod`, `desc_prod`, `id_cat_prod`, `qtd_prod`, `forn_prod`) VALUES ($cod_prod,'$desc_prod','$id_cat_prod',$qtd_prod,'$forn_prod')";
+    $sql = "INSERT INTO fornecedor (cod_forn, razsoc_forn, cnpj_forn, nome_forn, cidade_forn, tel_forn, email_forn) VALUES ($cod_forn,'$razsoc_forn','$cnpj_forn','$nome_forn','$cidade_forn', '$tel_forn', '$email_forn')";
 
     $inserir = mysqli_query($conexao, $sql);
 
@@ -19,7 +22,7 @@
 <!-- Head -->
 <?php
     include 'head.php';
-    $page = 2;
+    $page = 4;
     include 'navbar.php'; 
 ?>
 <!-- Head End -->
@@ -28,8 +31,8 @@
 <div>
     <center>
         <div class="container" style="width: 500px; margin-top: 40px;">
-            <h4 style="margin-top: 20px;">Produto cadastrado com sucesso!</h4>
-            <a class="btn btn-sm btn-primary" href="cadastro_produto.php" role="button"><i
+            <h4 style="margin-top: 20px;">Fornecedor cadastrado com sucesso!</h4>
+            <a class="btn btn-sm btn-primary" href="cadastro_fornecedor.php" role="button"><i
                     class="fas fa-long-arrow-alt-left"></i>&nbsp;Voltar</a>
         </div>
     </center>

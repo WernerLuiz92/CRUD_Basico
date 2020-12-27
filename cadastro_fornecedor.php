@@ -1,9 +1,16 @@
 <!-- Code -->
-<!--?php
+<?php
 
     include '_conexao.php';
 
-?-->
+    $sql1= "SELECT MAX(cod_forn) as cod_forn FROM fornecedor";
+    $consulta1 = mysqli_query($conexao, $sql1);
+
+    $array1 = mysqli_fetch_array($consulta1);
+
+    $cod_forn = $array1['cod_forn'] + 1;
+
+?>
 <!-- Code End -->
 
 <!-- Head -->
@@ -19,43 +26,38 @@
     <div class="container" id="tamanhoContainer" style="margin-top: 40px; width: 500px;">
         <div style="margin-top: 20px;"></div>
         <h4>Cadastro de Fornecedor</h4>
-        <form action="_inserir_produto.php" method="post" style="margin-top: 20px;">
+        <form action="_inserir_fornecedor.php" method="post" style="margin-top: 20px;">
             <div class="form-group">
-                <label>Cód. Produto</label>
-                <input type="number" class="form-control" name="cod_prod" placeholder="Insira o código do produto"
-                    required>
+                <label>Cód. fornecedor</label>
+                <input type="number" class="form-control" name="cod_forn" value="<?php echo $cod_forn; ?>" required>
             </div>
             <div class="form-group">
-                <label>Descrição</label>
-                <input type="text" class="form-control" name="desc_prod" placeholder="Insira o nome do produto"
+                <label>Razão Social</label>
+                <input type="text" class="form-control" name="razsoc_forn" placeholder="Insira a razão social"
                     autocomplete="off" required>
             </div>
             <div class="form-group">
-                <label>Categoria</label>
-                <select class="form-control" name="cat_prod">
-                    <option>Periféricos</option>
-                    <option>Hardware</option>
-                    <option>Software</option>
-                    <option>Smartphones</option>
-                    <option>Gadgets</option>
-                </select>
+                <label>CNPJ</label>
+                <input type="text" class="form-control" name="cnpj_forn" placeholder="Insira o CNPJ. Somente numeros!" autocomplete="off" required>
             </div>
             <div class="form-group">
-                <label>Quantidade</label>
-                <input type="number" class="form-control" name="qtd_prod" placeholder="Insira a quantidade" required>
+                <label>Nome Fantasia</label>
+                <input type="text" class="form-control" name="nome_forn" placeholder="Insira o nome fantasia" autocomplete="off" required>
             </div>
             <div class="form-group">
-                <label>Fornecedor</label>
-                <select class="form-control" name="forn_prod">
-                    <option>Pauta</option>
-                    <option>Braile</option>
-                    <option>Aldo</option>
-                    <option>Solid</option>
-                </select>
+                <label>Cidade</label>
+                <input type="text" class="form-control" name="cidade_forn" placeholder="Insira a cidade" required>
             </div>
-            <div class="botoes" style="text-align: right; width: 49%; float: right;">
-                <a class="btn btn-danger btn-sm" href="cadastro_produto.php" role="button"><i
-                        class="fas fa-eraser"></i>&nbsp;Limpar</a>
+            <div class="form-group">
+                <label>Telefone de Contato</label>
+                <input type="text" class="form-control" name="tel_forn" placeholder="Insira o telefone de contato">
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" class="form-control" name="email_forn" placeholder="Insira o email de contato">
+            </div>
+            <div class="botoes" style="margin-bottom: 20px; text-align: right; width: 49%; float: right;">
+                <button type="reset" class="btn btn-danger btn-sm"><i class="fas fa-eraser"></i>&nbsp;Limpar</button>
                 <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i>&nbsp;Salvar</button>
             </div>
         </form>
