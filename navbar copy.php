@@ -48,15 +48,16 @@
             </li>
         </ul>
 <?php 
-    if (isset($_SESSION['user'])) {
+    if (!isset($_SESSION['user'])) {
+        $user = $_SESSION['user'];
 ?>
-        <form class="form-inline" action="_logout.php" method="post" style="position: absolute; right: 10px;">
+<form class="form-inline" action="_logout.php" method="post" style="position: absolute; right: 10px;">
             <div class="input-group" style="margin-left: 5px; width: 150px;">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="user"><i class="fas fa-user-alt"></i></span>
                 </div>
                 <input type="text" class="form-control" name="user" placeholder="Usuário" aria-label="Username"
-                    aria-describedby="user" value="<?php echo $_SESSION['user']; ?>" disabled>
+                    aria-describedby="user" value="<?php echo $user; ?>" disabled>
             </div>
             <button class="btn btn-sm btn-outline-secondary" type="submit" style="margin-left: 5px;">Sair</button>
         </form>
@@ -69,14 +70,14 @@
                     <span class="input-group-text" id="user"><i class="fas fa-user-alt"></i></span>
                 </div>
                 <input type="text" class="form-control" name="user" placeholder="Usuário" aria-label="Username"
-                    aria-describedby="user" required>
+                    aria-describedby="user">
             </div>
             <div class="input-group" style="margin-left: 5px; width: 150px;">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="pass"><i class="fas fa-unlock-alt"></i></span>
                 </div>
                 <input type="password" class="form-control" name="pass" placeholder="Senha" aria-label="Username"
-                    aria-describedby="pass" required>
+                    aria-describedby="pass">
             </div>
             <button class="btn btn-sm btn-outline-secondary" type="submit" style="margin-left: 5px;">Login</button>
         </form>

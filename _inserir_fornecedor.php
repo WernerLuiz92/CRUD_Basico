@@ -1,6 +1,7 @@
 <!-- Code -->
 <?php
 
+    include '_session.php';
     include '_conexao.php';
 
     $cod_forn = $_POST['cod_forn'];

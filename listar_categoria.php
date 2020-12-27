@@ -1,9 +1,10 @@
 <!-- Code -->
-<!--?php
+<?php
 
+    include '_session.php';
     include '_conexao.php';
 
-?-->
+?>
 <!-- Code End -->
 
 <!-- Head -->
@@ -29,16 +30,15 @@
                 </tr>
             </thead>
             <?php
-                        include '_conexao.php';
-                        $sql = "SELECT * FROM `categoria`";
-                        $busca = mysqli_query($conexao,$sql);
+                $sql = "SELECT * FROM `categoria`";
+                $busca = mysqli_query($conexao,$sql);
 
-                        while ($array = mysqli_fetch_array($busca)) {
-                            $id_cat = $array['id_cat'];
-                            $cod_cat = $array['cod_cat'];
-                            $nome_cat = $array['nome_cat'];
-                            $desc_cat = $array['desc_cat'];
-                    ?>
+                while ($array = mysqli_fetch_array($busca)) {
+                    $id_cat = $array['id_cat'];
+                    $cod_cat = $array['cod_cat'];
+                    $nome_cat = $array['nome_cat'];
+                    $desc_cat = $array['desc_cat'];
+            ?>
             <tr>
                 <td><?php echo $cod_cat ?></td>
                 <td><?php echo $nome_cat ?></td>
@@ -50,8 +50,8 @@
                         href="confirma_exclusao_categoria.php?id=<?php echo $id_cat ?>" role="button"><i
                             class="far fa-trash-alt"></i>&nbsp;Excluir</a>
                 </td>
-                <?php
-                        }
+            <?php
+                }
             ?>
             </tr>
         </table>

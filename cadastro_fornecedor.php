@@ -1,6 +1,7 @@
 <!-- Code -->
 <?php
 
+    include '_session.php';
     include '_conexao.php';
 
     $sql1= "SELECT MAX(cod_forn) as cod_forn FROM fornecedor";

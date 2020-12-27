@@ -1,9 +1,10 @@
 <!-- Code -->
-<!--?php
+<?php
 
-    include '_conexao.php';
+    include '_session.php';
+    //include '_conexao.php';
 
-?-->
+?>
 <!-- Code End -->
 
 <!-- Head -->

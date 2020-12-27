@@ -1,4 +1,3 @@
-<!-- Code -->
 <?php
 
     $servername = "localhost"; //Padrão - Server Local
@@ -10,24 +9,3 @@
     $conexao = mysqli_connect($servername, $username, $password, $database);
 
 ?>
-<!-- Code End -->
-
-<!-- Head -->
-<!--?php
-    include 'head.php';
-    $page = #;
-    include 'navbar.php'; 
-?-->
-<!-- Head End -->
-
-<!-- Body -->
-<!--div>
-
-</div-->
-<!-- Body End -->
-
-<!-- Footer -->
-<!--?php
-    include 'footer.php';
-?-->
-<!-- Footer End -->

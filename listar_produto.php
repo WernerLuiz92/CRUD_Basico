@@ -1,9 +1,10 @@
 <!-- Code -->
-<!--?php
+<?php
 
+    include '_session.php';
     include '_conexao.php';
 
-?-->
+?>
 <!-- Code End -->
 
 <!-- Head -->
@@ -31,18 +32,17 @@
                 </tr>
             </thead>
             <?php
-                        include '_conexao.php';
-                        $sql = "SELECT id_prod, cod_prod, desc_prod, categoria.nome_cat, qtd_prod, fornecedor.nome_forn FROM produto, categoria, fornecedor WHERE produto.id_cat_prod = categoria.id_cat AND produto.id_forn_prod = fornecedor.id_forn ORDER BY cod_prod";
-                        $busca = mysqli_query($conexao,$sql);
+                $sql = "SELECT id_prod, cod_prod, desc_prod, categoria.nome_cat, qtd_prod, fornecedor.nome_forn FROM produto, categoria, fornecedor WHERE produto.id_cat_prod = categoria.id_cat AND produto.id_forn_prod = fornecedor.id_forn ORDER BY cod_prod";
+                $busca = mysqli_query($conexao,$sql);
 
-                        while ($array = mysqli_fetch_array($busca)) {
-                            $id_prod = $array['id_prod'];
-                            $cod_prod = $array['cod_prod'];
-                            $desc_prod = $array['desc_prod'];
-                            $nome_cat = $array['nome_cat'];
-                            $qtd_prod = $array['qtd_prod'];
-                            $nome_forn = $array['nome_forn'];
-                    ?>
+                while ($array = mysqli_fetch_array($busca)) {
+                    $id_prod = $array['id_prod'];
+                    $cod_prod = $array['cod_prod'];
+                    $desc_prod = $array['desc_prod'];
+                    $nome_cat = $array['nome_cat'];
+                    $qtd_prod = $array['qtd_prod'];
+                    $nome_forn = $array['nome_forn'];
+            ?>
             <tr>
                 <td><?php echo $cod_prod ?></td>
                 <td><?php echo $desc_prod ?></td>
@@ -56,8 +56,8 @@
                         href="confirma_exclusao_produto.php?id=<?php echo $id_prod ?>" role="button"><i
                             class="far fa-trash-alt"></i>&nbsp;Excluir</a>
                 </td>
-                <?php
-                        }
+            <?php
+                }
             ?>
             </tr>
         </table>

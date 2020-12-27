@@ -1,6 +1,7 @@
 <!-- Code -->
 <?php
 
+    include '_session.php';
     include '_conexao.php';
 
     $sql = "SELECT MAX(cod_cat) as cod_cat FROM categoria";
