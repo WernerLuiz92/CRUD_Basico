@@ -31,41 +31,29 @@
 
 ## Sobre o Projeto
 
-O *Pitu* é uma aplicação micro-SaaS pensada para, de forma simples e fácil, encurtar e vizualizar estatíticas de uma URL.
+Trata-se de um sistema de CRUD, projetado com o intuíto de por em pratica os conhecimentos adquiridos durante o curso ministrado pelo professor Ricardo Milbrath Gonçalves.
 
-### *Mas, por que Pitu??*
+### _Definição de CRUD_
 
-O Pitu é considerado o maior camarão de água doce podendo chegar a medir quase 50 centímetros, porém ele nasce muito pequeno.
+CRUD é uma abreviação das iniciais de _Create_, _Read_, _Update_ e _Delete_. Que são as funcionalidades básicas principais de um sistema de software.
 
-Esta ideia de nascer pequeno e se tornar grande, é justamente a ideia de nosso projeto. Onde um usuário com uma URL encurtada (pequena)
-pode acessar um site cuja URL seja muito maior.
-
-Este projeto foi proposto durante a *Semana Full Stack JS*, projeto do professor [Luiz Duarte](https://www.luiztools.com.br). 
-
+Este projeto foi proposto durante o curso _CRUD Básico com Bootstrap 4 , PHP e MySQL_, criado pelo professor [Ricardo Milbrath Gonçalves](https://www.udemy.com/course/curso-basico-de-bootstrap-4-php-e-mysql-gratis/).
 
 ## Tecnologias Utilizadas
 
--  [Axios](https://github.com/axios/axios)
--  [Date-fns](https://date-fns.org/)
--  [Express](https://expressjs.com/)
--  [MySQL](https://www.mysql.com/)
--  [Node.js](https://nodejs.org/en/)
--  [NPM](https://www.npmjs.com/)
--  [React Bootstrap](https://react-bootstrap.github.io/)
--  [ReactJS](https://reactjs.org/)
--  [SCSS](https://sass-lang.com/)
--  [Styled Components](https://styled-components.com/)
--  [Typescript](https://www.typescriptlang.org/)
--  [Yarn](https://yarnpkg.com/)
+- [PHP 7.4.11](https://www.php.net/)
+- [MySQL](https://www.mysql.com/)
+- [Bootstrap 4](https://getbootstrap.com/)
+- [Fontawesome](https://fontawesome.com/)
 
 ## Como Executar o Projeto
 
-- ### *Pré-requisitos*
+- ### _Pré-requisitos_
 
-  - É *necessário* possuir o **[Node.js](https://nodejs.org/en/)** instalado no computador.
-  - É *necessário* possuir o **[Git](https://git-scm.com/)** instalado e configurado no computador.
-  - Também, é *preciso* ter um gerenciador de pacotes seja o **[Yarn](https://yarnpkg.com/)** ou **[NPM](https://www.npmjs.com/)**.
-  - Por fim, é *essencial* ter o **[MySQL](https://www.mysql.com/)** instalado na máquina.
+  - É _necessário_ possuir o **[Node.js](https://nodejs.org/en/)** instalado no computador.
+  - É _necessário_ possuir o **[Git](https://git-scm.com/)** instalado e configurado no computador.
+  - Também, é _preciso_ ter um gerenciador de pacotes seja o **[Yarn](https://yarnpkg.com/)** ou **[NPM](https://www.npmjs.com/)**.
+  - Por fim, é _essencial_ ter o **[MySQL](https://www.mysql.com/)** instalado na máquina.
 
 1. Faça um clone do repositório:
 
@@ -97,10 +85,9 @@ Este projeto foi proposto durante a *Semana Full Stack JS*, projeto do professor
 
 ## Licença
 
-
-
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.<br />
 <img alt="License" src="https://img.shields.io/github/license/WernerLuiz92/URL_Shortener_Pitu?style=for-the-badge">
 
 ---
+
 <sup>Projeto desenvolvido com a tutoria de [Luiz Duarte](https://github.com/luiztools), da [LuizTools](https://www.luiztools.com.br).</sup>
