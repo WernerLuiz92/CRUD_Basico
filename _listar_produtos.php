@@ -23,11 +23,29 @@
                     <th scope="col">Fornecedor</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                </tr>
-            </tbody>
+            <?php
+                        include '_conexao.php';
+                        $sql = "SELECT * FROM `produto`";
+                        $busca = mysqli_query($conexao,$sql);
+
+                        while ($array = mysqli_fetch_array($busca)) {
+                            $id_prod = $array['id_prod'];
+                            $cod_prod = $array['cod_prod'];
+                            $desc_prod = $array['desc_prod'];
+                            $cat_prod = $array['cat_prod'];
+                            $qtd_prod = $array['qtd_prod'];
+                            $forn_prod = $array['forn_prod']
+                    ?>
+            <tr>
+                <td><?php echo $cod_prod ?></td>
+                <td><?php echo $desc_prod ?></td>
+                <td><?php echo $cat_prod ?></td>
+                <td><?php echo $qtd_prod ?></td>
+                <td><?php echo $forn_prod ?></td>
+                <?php
+                        }
+                    ?>
+            </tr>
         </table>
     </div>
 
