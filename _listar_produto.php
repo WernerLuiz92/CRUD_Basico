@@ -47,7 +47,7 @@
                 <td>
                     <a class="btn btn-sm btn-outline-warning" href="_editar_produto.php?id=<?php echo $id_prod ?>"
                         role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
-                    <a class="btn btn-sm btn-outline-danger" href="_excluir_produto.php?id=<?php echo $id_prod ?>"
+                    <a class="btn btn-sm btn-outline-danger" href="_confirma_exclusao_produto.php?id=<?php echo $id_prod ?>"
                         role="button"><i class="far fa-trash-alt"></i>&nbsp;Excluir</a>
                 </td>
                 <?php

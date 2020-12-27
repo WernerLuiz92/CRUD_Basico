@@ -1,13 +1,13 @@
 <?php
 include '_conexao.php';
 
-    $codprod = $_POST['codprod'];
-    $descprod = $_POST['descprod'];
-    $catprod = $_POST['catprod'];
-    $qtdprod = $_POST['qtdprod'];
-    $fornprod = $_POST['fornprod'];
+    $codprod = $_POST['cod_prod'];
+    $descprod = $_POST['desc_prod'];
+    $catprod = $_POST['cat_prod'];
+    $qtdprod = $_POST['qtd_prod'];
+    $fornprod = $_POST['forn_prod'];
 
-    $sql = "INSERT INTO `produto`(`cod_prod`, `desc_prod`, `cat_prod`, `qtd_prod`, `forn_prod`) VALUES ($codprod,'$descprod','$catprod',$qtdprod,'$fornprod')";
+    $sql = "INSERT INTO `produto`(`cod_prod`, `desc_prod`, `cat_prod`, `qtd_prod`, `forn_prod`) VALUES ($cod_prod,'$desc_prod','$cat_prod',$qtd_prod,'$forn_prod')";
 
     $inserir = mysqli_query($conexao, $sql);
 ?>

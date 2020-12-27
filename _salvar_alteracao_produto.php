@@ -3,8 +3,13 @@
 include '_conexao.php';
 
 $id = $_POST['id_prod'];
+//$cod_prod = $_POST['cod_prod']; Não vai ser alterado, por isso não precisa ser puxado.
+$desc_prod = $_POST['desc_prod'];
+$cat_prod = $_POST['cat_prod'];
+$qtd_prod = $_POST['qtd_prod'];
+$forn_prod = $_POST['forn_prod'];
 
-$sql = "DELETE FROM produto WHERE id_prod = $id";
+$sql = "UPDATE produto SET desc_prod = '$desc_prod', cat_prod = '$cat_prod', qtd_prod = $qtd_prod, forn_prod = '$forn_prod' WHERE id_prod = $id";
 
 $atualizar = mysqli_query($conexao, $sql);
 
@@ -24,7 +29,7 @@ $atualizar = mysqli_query($conexao, $sql);
 <body>
 <center>
     <div class="container" style="width: 500px; margin-top: 40px;">
-        <h4>Produto excluído com sucesso!</h4>
+        <h4>Produto alterado com sucesso!</h4>
     </div>
     <div style="padding-top: 20px">
         <a href="_listar_produto.php" role="button" class="btn btn-sm btn-primary">Voltar</a>

@@ -11,7 +11,7 @@ $id = $_GET['id'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alteraração de cadastro</title>
+    <title>Exclusão de cadastro</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8b054ccba1.js" crossorigin="anonymous"></script>
@@ -35,9 +35,9 @@ $id = $_GET['id'];
 <body>
     <div class="container" id="tamanhoContainer" style="margin-top: 40px;">
         <center>
-            <h4>Alteração de Cadastro</h4>
+            <h4>Tem certeza que deseja excluir este produto?</h4>
         </center>
-        <form action="_salvar_alteracao_produto.php" method="post" style="margin-top: 20px;">
+        <form action="_excluir_produto.php" method="post" style="margin-top: 20px;">
             <?php
 
             $sql = "SELECT * FROM `produto` WHERE id_prod = $id";
@@ -60,12 +60,12 @@ $id = $_GET['id'];
             <!--Fim form-group -->
             <div class="form-group">
                 <label>Descrição</label>
-                <input type="text" class="form-control" name="desc_prod" value="<?php echo $desc_prod ?>">
+                <input type="text" class="form-control" name="desc_prod" value="<?php echo $desc_prod ?>" disabled>
             </div>
             <!--Fim form-group -->
             <div class="form-group">
                 <label>Categoria</label>
-                <select class="form-control" name="cat_prod">
+                <select class="form-control" name="cat_prod" disabled>
                     <option <?php if ($cat_prod == 'Periféricos'){echo 'selected';} ?>>Periféricos</option>
                     <option <?php if ($cat_prod == 'Hardware'){echo 'selected';} ?>>Hardware</option>
                     <option <?php if ($cat_prod == 'Software'){echo 'selected';} ?>>Software</option>
@@ -76,12 +76,12 @@ $id = $_GET['id'];
             <!--Fim form-group -->
             <div class="form-group">
                 <label>Quantidade</label>
-                <input type="number" class="form-control" name="qtd_prod" value="<?php echo $qtd_prod ?>">
+                <input type="number" class="form-control" name="qtd_prod" value="<?php echo $qtd_prod ?>" disabled>
             </div>
             <!--Fim form-group -->
             <div class="form-group">
                 <label>Fornecedor</label>
-                <select class="form-control" name="forn_prod">
+                <select class="form-control" name="forn_prod" disabled>
                     <option <?php if ($forn_prod == 'Pauta'){echo 'selected';} ?>>Pauta</option>
                     <option <?php if ($forn_prod == 'Braile'){echo 'selected';} ?>>Braile</option>
                     <option <?php if ($forn_prod == 'Aldo'){echo 'selected';} ?>>Aldo</option>
@@ -90,7 +90,7 @@ $id = $_GET['id'];
             </div>
             <!--Fim form-group -->
             <div class="botoes" style="text-align: right;">
-                <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-check"></i>&nbsp;Atualizar</button>
+                <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-check"></i>&nbsp;Confirmar</button>
                 <a class="btn btn-sm btn-primary" href="_listar_produto.php" role="button"><i
                         class="fas fa-long-arrow-alt-left"></i>&nbsp;Voltar</a>
             </div>

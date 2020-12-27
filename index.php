@@ -31,19 +31,19 @@
         <form action="_inserir_produto.php" method="post" style="margin-top: 20px;">
             <div class="form-group">
                 <label>Cód. Produto</label>
-                <input type="number" class="form-control" name="codprod" placeholder="Insira o código do produto"
+                <input type="number" class="form-control" name="cod_prod" placeholder="Insira o código do produto"
                     required>
             </div>
             <!--Fim form-group -->
             <div class="form-group">
                 <label>Descrição</label>
-                <input type="text" class="form-control" name="descprod" placeholder="Insira o nome do produto"
+                <input type="text" class="form-control" name="desc_prod" placeholder="Insira o nome do produto"
                     autocomplete="off" required>
             </div>
             <!--Fim form-group -->
             <div class="form-group">
                 <label>Categoria</label>
-                <select class="form-control" name="catprod">
+                <select class="form-control" name="cat_prod">
                     <option>Periféricos</option>
                     <option>Hardware</option>
                     <option>Software</option>
@@ -54,12 +54,12 @@
             <!--Fim form-group -->
             <div class="form-group">
                 <label>Quantidade</label>
-                <input type="number" class="form-control" name="qtdprod" placeholder="Insira a quantidade" required>
+                <input type="number" class="form-control" name="qtd_prod" placeholder="Insira a quantidade" required>
             </div>
             <!--Fim form-group -->
             <div class="form-group">
                 <label>Fornecedor</label>
-                <select class="form-control" name="fornprod">
+                <select class="form-control" name="forn_prod">
                     <option>Pauta</option>
                     <option>Braile</option>
                     <option>Aldo</option>
