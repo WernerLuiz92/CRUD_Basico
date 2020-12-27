@@ -23,37 +23,31 @@
             <thead>
                 <tr>
                     <th scope="col">Cód.</th>
+                    <th scope="col">Nome</th>
                     <th scope="col">Descrição</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col">Quantidade</th>
-                    <th scope="col">Fornecedor</th>
                     <th scope="col">Ação</th>
                 </tr>
             </thead>
             <?php
                         include '_conexao.php';
-                        $sql = "SELECT * FROM `produto`";
+                        $sql = "SELECT * FROM `categoria`";
                         $busca = mysqli_query($conexao,$sql);
 
                         while ($array = mysqli_fetch_array($busca)) {
-                            $id_prod = $array['id_prod'];
-                            $cod_prod = $array['cod_prod'];
-                            $desc_prod = $array['desc_prod'];
-                            $cat_prod = $array['cat_prod'];
-                            $qtd_prod = $array['qtd_prod'];
-                            $forn_prod = $array['forn_prod'];
+                            $id_cat = $array['id_cat'];
+                            $cod_cat = $array['cod_cat'];
+                            $nome_cat = $array['nome_cat'];
+                            $desc_cat = $array['desc_cat'];
                     ?>
             <tr>
-                <td><?php echo $cod_prod ?></td>
-                <td><?php echo $desc_prod ?></td>
-                <td><?php echo $cat_prod ?></td>
-                <td><?php echo $qtd_prod ?></td>
-                <td><?php echo $forn_prod ?></td>
+                <td><?php echo $cod_cat ?></td>
+                <td><?php echo $nome_cat ?></td>
+                <td><?php echo $desc_cat ?></td>
                 <td>
-                    <a class="btn btn-sm btn-outline-warning" href="editar_produto.php?id=<?php echo $id_prod ?>"
+                    <a class="btn btn-sm btn-outline-warning" href="editar_categoria.php?id=<?php echo $id_cat ?>"
                         role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
                     <a class="btn btn-sm btn-outline-danger"
-                        href="confirma_exclusao_produto.php?id=<?php echo $id_prod ?>" role="button"><i
+                        href="confirma_exclusao_categoria.php?id=<?php echo $id_cat ?>" role="button"><i
                             class="far fa-trash-alt"></i>&nbsp;Excluir</a>
                 </td>
                 <?php

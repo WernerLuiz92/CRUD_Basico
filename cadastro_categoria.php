@@ -1,9 +1,16 @@
 <!-- Code -->
-<!--?php
+<?php
 
     include '_conexao.php';
 
-?-->
+    $sql = "SELECT MAX(cod_cat) as cod_cat FROM categoria";
+    $consulta = mysqli_query($conexao, $sql);
+
+    $array = mysqli_fetch_array($consulta);
+
+    $cod_cat = $array['cod_cat'];
+
+?>
 <!-- Code End -->
 
 <!-- Head -->
@@ -18,43 +25,23 @@
 <div>
     <div class="container" id="tamanhoContainer" style="margin-top: 40px; width: 500px;">
         <div style="margin-top: 20px;"></div>
-        <h4>Cadastro de Fornecedor</h4>
-        <form action="_inserir_produto.php" method="post" style="margin-top: 20px;">
+        <h4>Cadastro de Categorias</h4>
+        <form action="_inserir_categoria.php" method="post" style="margin-top: 20px;">
             <div class="form-group">
-                <label>Cód. Produto</label>
-                <input type="number" class="form-control" name="cod_prod" placeholder="Insira o código do produto"
-                    required>
+                <label>Cód.</label>
+                <input type="number" class="form-control" name="cod_cat" value="<?php echo $cod_cat + 1; ?>" required>
             </div>
             <div class="form-group">
-                <label>Descrição</label>
-                <input type="text" class="form-control" name="desc_prod" placeholder="Insira o nome do produto"
+                <label>Nome</label>
+                <input type="text" class="form-control" name="nome_cat" placeholder="Insira o nome da categoria"
                     autocomplete="off" required>
             </div>
             <div class="form-group">
-                <label>Categoria</label>
-                <select class="form-control" name="cat_prod">
-                    <option>Periféricos</option>
-                    <option>Hardware</option>
-                    <option>Software</option>
-                    <option>Smartphones</option>
-                    <option>Gadgets</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Quantidade</label>
-                <input type="number" class="form-control" name="qtd_prod" placeholder="Insira a quantidade" required>
-            </div>
-            <div class="form-group">
-                <label>Fornecedor</label>
-                <select class="form-control" name="forn_prod">
-                    <option>Pauta</option>
-                    <option>Braile</option>
-                    <option>Aldo</option>
-                    <option>Solid</option>
-                </select>
+                <label>Descrição</label>
+                <textarea type="text" class="form-control" name="desc_cat" placeholder="Uma breve descrição" required rows="3"></textarea>
             </div>
             <div class="botoes" style="text-align: right; width: 49%; float: right;">
-                <a class="btn btn-danger btn-sm" href="cadastro_produto.php" role="button"><i
+                <a class="btn btn-danger btn-sm" href="cadastro_categoria.php" role="button"><i
                         class="fas fa-eraser"></i>&nbsp;Limpar</a>
                 <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i>&nbsp;Salvar</button>
             </div>

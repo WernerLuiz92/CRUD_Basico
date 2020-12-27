@@ -3,9 +3,11 @@
 
     include '_conexao.php';
 
-    $id = $_POST['id_prod'];
+    $id = $_POST['id_cat'];
+    $nome_cat = $_POST['nome_cat'];
+    $desc_cat = $_POST['desc_cat'];
 
-    $sql = "DELETE FROM produto WHERE id_prod = $id";
+    $sql = "UPDATE categoria SET nome_cat = '$nome_cat', desc_cat = '$desc_cat' WHERE id_cat = $id";
 
     $atualizar = mysqli_query($conexao, $sql);
 
@@ -15,7 +17,7 @@
 <!-- Head -->
 <?php
     include 'head.php';
-    $page = 5;
+    $page = 6;
     include 'navbar.php'; 
 ?>
 <!-- Head End -->
@@ -24,8 +26,8 @@
 <div>
     <center>
         <div class="container" style="width: 500px; margin-top: 40px;">
-            <h4 style="margin-top: 20px;">Produto excluído com sucesso!</h4>
-            <a class="btn btn-sm btn-primary" href="listar_produto.php" role="button"><i
+            <h4 style="margin-top: 20px;">Categoria alterada com sucesso!</h4>
+            <a class="btn btn-sm btn-primary" href="listar_categoria.php" role="button"><i
                     class="fas fa-long-arrow-alt-left"></i>&nbsp;Voltar</a>
         </div>
     </center>

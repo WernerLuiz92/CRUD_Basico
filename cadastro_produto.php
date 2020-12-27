@@ -1,9 +1,16 @@
 <!-- Code -->
-<!--?php
+<?php
 
     include '_conexao.php';
 
-?-->
+    $sql = "SELECT MAX(cod_prod) as cod_prod FROM produto";
+    $consulta = mysqli_query($conexao, $sql);
+
+    $array = mysqli_fetch_array($consulta);
+
+    $cod_prod = $array['cod_prod'];
+
+?>
 <!-- Code End -->
 
 <!-- Head -->
@@ -16,14 +23,13 @@
 
 <!-- Body -->
 <div>
-    <div class="container" id="tamanhoContainer" style="margin-top: 40px; width: 500px;">
+    <div class="container" id="tamanhoContainer" style="margin-top: 35px; width: 500px;">
         <div style="margin-top: 20px;"></div>
         <h4>Cadastro de Produtos</h4>
         <form action="_inserir_produto.php" method="post" style="margin-top: 20px;">
             <div class="form-group">
-                <label>Cód. Produto</label>
-                <input type="number" class="form-control" name="cod_prod" placeholder="Insira o código do produto"
-                    required>
+                <label>Cód.</label>
+                <input type="number" class="form-control" name="cod_prod" value="<?php echo $cod_prod + 1; ?>" required>
             </div>
             <div class="form-group">
                 <label>Descrição</label>
@@ -54,8 +60,7 @@
                 </select>
             </div>
             <div class="botoes" style="text-align: right; width: 49%; float: right;">
-                <a class="btn btn-danger btn-sm" href="cadastro_produto.php" role="button"><i
-                        class="fas fa-eraser"></i>&nbsp;Limpar</a>
+                <button type="reset" class="btn btn-danger btn-sm"><i class="fas fa-eraser"></i>&nbsp;Limpar</button>
                 <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i>&nbsp;Salvar</button>
             </div>
         </form>

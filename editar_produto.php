@@ -26,9 +26,9 @@
         <?php
 
             $sql = "SELECT * FROM `produto` WHERE id_prod = $id";
-            $buscar = mysqli_query($conexao, $sql);
+            $consulta = mysqli_query($conexao, $sql);
 
-            while ($array = mysqli_fetch_array($buscar)) {
+            while ($array = mysqli_fetch_array($consulta)) {
                 $id_prod = $array['id_prod'];
                 $cod_prod = $array['cod_prod'];
                 $desc_prod = $array['desc_prod'];

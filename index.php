@@ -1,65 +1,173 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
+<!-- Code -->
+<!--?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Estoque</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/8b054ccba1.js" crossorigin="anonymous"></script>
-</head>
+    include '_conexao.php';
 
-<body>
-    <center>
-        <div class="container" style="width: 500px; margin-top: 40px;">
-            <a class="btn btn-sm btn-primary active" href="#" role="button" aria-pressed="true"><i
-                    class="fas fa-bars"></i>&nbsp;Menu</a>
-            <a class="btn btn-sm btn-primary" href="_cadastro_produto.php" role="button"><i
-                    class="fas fa-pencil-alt"></i>&nbsp;Cadastro</a>
-            <a class="btn btn-sm btn-primary" href="_listar_produto.php" role="button"><i
-                    class="fas fa-list"></i>&nbsp;Listar Produtos</a>
-        </div>
-        <div style="margin-top: 20px;"></div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Curso: CRUD Básico com Bootstrap 4 , PHP e MySQL</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Werner L. Gottschalt</h6>
-                <a href="#" class="card-link">Site Pessoal</a>
-                <a href="https://www.udemy.com/course/curso-basico-de-bootstrap-4-php-e-mysql-gratis/"
-                    class="card-link">Curso</a>
+?-->
+<!-- Code End -->
+
+<!-- Head -->
+<?php
+    include 'head.php';
+    $page = 1;
+    include 'navbar.php'; 
+?>
+<!-- Head End -->
+
+<!-- Body -->
+<div>
+    <div class="container">
+        <h4 style="margin-top: 20px;">Meus outros cursos:</h3>
+            <div class="row">
+                <div class="col-sm-4" style="margin-top: 20px;">
+                    <div class="container" style="margin-top: 20px; float: left; margin-right: 10px;">
+                        <div class="card" style="width: 18rem;">
+                            <img src="imagens/card1.jpg" class="card-img-top"
+                                alt="CRUD Básico com Bootstrap 4 , PHP e MySQL">
+                            <div class="card-body">
+                                <h5 class="card-title">Curso: CRUD Básico com Bootstrap 4 , PHP e MySQL</h5>
+                                <p class="card-text">Trata-se de um sistema de cadastro de produtos, seguindo os
+                                    principios
+                                    básicos de um
+                                    CRUD.<br>
+                                <h6 class="card-subtitle mb-2 text-muted">Aluno: Werner L. Gottschalt</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">9 Seções</li>
+                                <li class="list-group-item">31 Aulas</li>
+                                <li class="list-group-item">Duração Total: 6h 52m</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="https://github.com/WernerLuiz92/Curso_CRUD_Bootstrap_PHP_MySQL"
+                                    class="card-link">GitHub</a>
+                                <a href="https://www.udemy.com/course/curso-basico-de-bootstrap-4-php-e-mysql-gratis/"
+                                    class="card-link">Curso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="margin-top: 20px;">
+                    <div class="container" style="margin-top: 20px; float: left; margin-right: 10px;">
+                        <div class="card" style="width: 18rem;">
+                            <img src="imagens/card2.jpg" class="card-img-top"
+                                alt="PHP 7 Completo - Curso do Desenvolvedor Web 2020 + Projetos">
+                            <div class="card-body">
+                                <h5 class="card-title">PHP 7 Completo - Curso do Desenvolvedor Web 2020 + Projetos</h5>
+                                <p class="card-text">Domine PHP 7 , HTML, CSS, JavaScript, Banco de Dados, Curso Web
+                                    Completo partindo dos fundamentos até Projetos Reais!<br>
+                                <h6 class="card-subtitle mb-2 text-muted">Aluno: Werner L. Gottschalt</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">27 Seções</li>
+                                <li class="list-group-item">499 Aulas</li>
+                                <li class="list-group-item">Duração Total: 73h 39m</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Site Pessoal</a>
+                                <a href="https://www.udemy.com/course/php-7-completo/" class="card-link">Curso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="margin-top: 20px;">
+                    <div class="container" style="margin-top: 20px; float: left; margin-right: 10px;">
+                        <div class="card" style="width: 18rem;">
+                            <img src="imagens/card3.jpg" class="card-img-top"
+                                alt="Docker: Ferramenta essencial para Desenvolvedores">
+                            <div class="card-body">
+                                <h5 class="card-title">Docker: Ferramenta essencial para Desenvolvedores</h5>
+                                <p class="card-text">Aprenda a criar ambientes profissionais completos com Docker, que é
+                                    a principal tecnologia de containers do mercado!<br>
+                                <h6 class="card-subtitle mb-2 text-muted">Aluno: Werner L. Gottschalt</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">9 Seções</li>
+                                <li class="list-group-item">60 Aulas</li>
+                                <li class="list-group-item">Duração Total: 5h 39m</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Site Pessoal</a>
+                                <a href="https://www.udemy.com/course/curso-docker/" class="card-link">Curso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="margin-top: 20px;">
+                    <div class="container" style="margin-top: 20px; float: left; margin-right: 10px;">
+                        <div class="card" style="width: 18rem;">
+                            <img src="imagens/card2.jpg" class="card-img-top"
+                                alt="PHP 7 Completo - Curso do Desenvolvedor Web 2020 + Projetos">
+                            <div class="card-body">
+                                <h5 class="card-title">PHP 7 Completo - Curso do Desenvolvedor Web 2020 + Projetos</h5>
+                                <p class="card-text">Domine PHP 7 , HTML, CSS, JavaScript, Banco de Dados, Curso Web
+                                    Completo partindo dos fundamentos até Projetos Reais!<br>
+                                <h6 class="card-subtitle mb-2 text-muted">Aluno: Werner L. Gottschalt</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">27 Seções</li>
+                                <li class="list-group-item">499 Aulas</li>
+                                <li class="list-group-item">Duração Total: 73h 39m</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Site Pessoal</a>
+                                <a href="https://www.udemy.com/course/php-7-completo/" class="card-link">Curso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="margin-top: 20px;">
+                    <div class="container" style="margin-top: 20px; float: left; margin-right: 10px;">
+                        <div class="card" style="width: 18rem;">
+                            <img src="imagens/card2.jpg" class="card-img-top"
+                                alt="PHP 7 Completo - Curso do Desenvolvedor Web 2020 + Projetos">
+                            <div class="card-body">
+                                <h5 class="card-title">PHP 7 Completo - Curso do Desenvolvedor Web 2020 + Projetos</h5>
+                                <p class="card-text">Domine PHP 7 , HTML, CSS, JavaScript, Banco de Dados, Curso Web
+                                    Completo partindo dos fundamentos até Projetos Reais!<br>
+                                <h6 class="card-subtitle mb-2 text-muted">Aluno: Werner L. Gottschalt</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">27 Seções</li>
+                                <li class="list-group-item">499 Aulas</li>
+                                <li class="list-group-item">Duração Total: 73h 39m</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Site Pessoal</a>
+                                <a href="https://www.udemy.com/course/php-7-completo/" class="card-link">Curso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="margin-top: 20px;">
+                    <div class="container" style="margin-top: 20px; float: left; margin-right: 10px;">
+                        <div class="card" style="width: 18rem;">
+                            <img src="imagens/card2.jpg" class="card-img-top"
+                                alt="PHP 7 Completo - Curso do Desenvolvedor Web 2020 + Projetos">
+                            <div class="card-body">
+                                <h5 class="card-title">PHP 7 Completo - Curso do Desenvolvedor Web 2020 + Projetos</h5>
+                                <p class="card-text">Domine PHP 7 , HTML, CSS, JavaScript, Banco de Dados, Curso Web
+                                    Completo partindo dos fundamentos até Projetos Reais!<br>
+                                <h6 class="card-subtitle mb-2 text-muted">Aluno: Werner L. Gottschalt</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">27 Seções</li>
+                                <li class="list-group-item">499 Aulas</li>
+                                <li class="list-group-item">Duração Total: 73h 39m</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Site Pessoal</a>
+                                <a href="https://www.udemy.com/course/php-7-completo/" class="card-link">Curso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="container" style="width: 500px; margin-top: 20px;">
-            <p class="card-text">Sistema criado com o intuíto de aprendizado.<br></p>
-            <p class="card-text">Trata-se de um sistema de cadastro de produtos, seguindo os principios básicos de um
-                CRUD.<br>
-                <span>
-                    <p style="text-align: left;  margin-left: 15px;">
-                        <b>Create:</b> Inserir registros no banco de dados.<br>
-                        <b>Read:</b> Listar, consultar os registros do banco de dados.<br>
-                        <b>Update:</b> Alterar os registros.<br>
-                        <b>Delete:</b> Exclusão dos registros.<br>
-                    </p>
-                </span>
-        </div>
-    </center>
+    </div>
+</div>
+<!-- Body End -->
 
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+<!-- Footer -->
+<?php
+    include 'footer.php';
+?>
+<!-- Footer End -->
