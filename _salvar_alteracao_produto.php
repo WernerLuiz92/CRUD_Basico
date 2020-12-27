@@ -5,11 +5,11 @@
 
     $id = $_POST['id_prod'];
     $desc_prod = $_POST['desc_prod'];
-    $cat_prod = $_POST['cat_prod'];
+    $id_cat_prod = $_POST['id_cat_prod'];
     $qtd_prod = $_POST['qtd_prod'];
     $forn_prod = $_POST['forn_prod'];
 
-    $sql = "UPDATE produto SET desc_prod = '$desc_prod', cat_prod = '$cat_prod', qtd_prod = $qtd_prod, forn_prod = '$forn_prod' WHERE id_prod = $id";
+    $sql = "UPDATE produto SET desc_prod = '$desc_prod', id_cat_prod = '$id_cat_prod', qtd_prod = $qtd_prod, forn_prod = '$forn_prod' WHERE id_prod = $id";
 
     $atualizar = mysqli_query($conexao, $sql);
 

@@ -3,12 +3,12 @@
 
     include '_conexao.php';
 
-    $sql = "SELECT MAX(cod_prod) as cod_prod FROM produto";
-    $consulta = mysqli_query($conexao, $sql);
+    $sql1 = "SELECT MAX(cod_prod) as cod_prod FROM produto";
+    $consulta1 = mysqli_query($conexao, $sql1);
 
-    $array = mysqli_fetch_array($consulta);
+    $array1 = mysqli_fetch_array($consulta1);
 
-    $cod_prod = $array['cod_prod'];
+    $cod_prod = $array1['cod_prod'] + 1;
 
 ?>
 <!-- Code End -->
@@ -29,7 +29,7 @@
         <form action="_inserir_produto.php" method="post" style="margin-top: 20px;">
             <div class="form-group">
                 <label>Cód.</label>
-                <input type="number" class="form-control" name="cod_prod" value="<?php echo $cod_prod + 1; ?>" required>
+                <input type="number" class="form-control" name="cod_prod" value="<?php echo $cod_prod; ?>" required>
             </div>
             <div class="form-group">
                 <label>Descrição</label>
@@ -38,12 +38,26 @@
             </div>
             <div class="form-group">
                 <label>Categoria</label>
-                <select class="form-control" name="cat_prod">
-                    <option>Periféricos</option>
-                    <option>Hardware</option>
-                    <option>Software</option>
-                    <option>Smartphones</option>
-                    <option>Gadgets</option>
+                <select class="form-control" name="id_cat_prod">
+
+                    <?php
+                        $sql2 = "SELECT * FROM categoria ORDER BY cod_cat";
+                        $consulta2 = mysqli_query($conexao, $sql2);
+
+                        while ($array2 = mysqli_fetch_array($consulta2)) {
+
+                            $id_cat = $array2['id_cat'];
+                            $cod_cat = $array2['cod_cat'];
+                            $nome_cat = $array2['nome_cat'];
+                            $desc_cat = $array2['desc_cat'];
+                        
+
+                        ?>
+                        <option value="<?php echo $id_cat ?>" title="<?php echo $desc_cat ?>"><?php echo "$cod_cat - $nome_cat" ?></option>
+                    <?php
+                        }
+                    ?>
+
                 </select>
             </div>
             <div class="form-group">

@@ -23,7 +23,7 @@
             <h4>Tem certeza que deseja excluir este produto?</h4>
         </center>
         <form action="_excluir_produto.php" method="post" style="margin-top: 20px;">
-        <?php
+            <?php
 
             $sql = "SELECT * FROM `produto` WHERE id_prod = $id";
             $consulta = mysqli_query($conexao, $sql);
@@ -32,7 +32,7 @@
                 $id_prod = $array['id_prod'];
                 $cod_prod = $array['cod_prod'];
                 $desc_prod = $array['desc_prod'];
-                $cat_prod = $array['cat_prod'];
+                $id_cat_prod = $array['id_cat_prod'];
                 $qtd_prod = $array['qtd_prod'];
                 $forn_prod = $array['forn_prod']
 
@@ -49,18 +49,34 @@
             </div>
             <div class="form-group">
                 <label>Categoria</label>
-                <select class="form-control" name="cat_prod" disabled>
-                    <option <?php if ($cat_prod == 'Periféricos'){echo 'selected';} ?>>Periféricos</option>
-                    <option <?php if ($cat_prod == 'Hardware'){echo 'selected';} ?>>Hardware</option>
-                    <option <?php if ($cat_prod == 'Software'){echo 'selected';} ?>>Software</option>
-                    <option <?php if ($cat_prod == 'Smartphones'){echo 'selected';} ?>>Smartphones</option>
-                    <option <?php if ($cat_prod == 'Gadgets'){echo 'selected';} ?>>Gadgets</option>
+                <select class="form-control" name="id_cat_prod" disabled>
+
+                    <?php
+                        $sql2 = "SELECT * FROM categoria ORDER BY cod_cat";
+                        $consulta2 = mysqli_query($conexao, $sql2);
+
+                        while ($array2 = mysqli_fetch_array($consulta2)) {
+
+                            $id_cat = $array2['id_cat'];
+                            $cod_cat = $array2['cod_cat'];
+                            $nome_cat = $array2['nome_cat'];
+                            $desc_cat = $array2['desc_cat'];
+                        
+
+                        ?>
+                    <option <?php if ($id_cat_prod == $id_cat){echo 'selected ';} ?> value="<?php echo $id_cat ?>"
+                        title="<?php echo $desc_cat ?>"><?php echo "$cod_cat - $nome_cat" ?></option>
+                    <?php
+                        }
+                    ?>
+
                 </select>
             </div>
             <div class="form-group">
                 <label>Quantidade</label>
                 <input type="number" class="form-control" name="qtd_prod" value="<?php echo $qtd_prod ?>" disabled>
-            </div>                <div class="form-group">
+            </div>
+            <div class="form-group">
                 <label>Fornecedor</label>
                 <select class="form-control" name="forn_prod" disabled>
                     <option <?php if ($forn_prod == 'Pauta'){echo 'selected';} ?>>Pauta</option>
@@ -70,12 +86,12 @@
                 </select>
             </div>
             <div class="botoes" style="text-align: right;">
-                <button type="submit" class="btn btn-success btn-sm"><i
-                        class="fas fa-check"></i>&nbsp;Confirmar</button>
                 <a class="btn btn-sm btn-primary" href="listar_produto.php" role="button"><i
                         class="fas fa-long-arrow-alt-left"></i>&nbsp;Voltar</a>
+                <button type="submit" class="btn btn-success btn-sm"><i
+                        class="fas fa-check"></i>&nbsp;Confirmar</button>
             </div>
-    <?php   } ?>
+            <?php   } ?>
         </form>
     </div>
 </div>

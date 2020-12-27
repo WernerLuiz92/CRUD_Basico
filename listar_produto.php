@@ -32,21 +32,21 @@
             </thead>
             <?php
                         include '_conexao.php';
-                        $sql = "SELECT * FROM `produto`";
+                        $sql = "SELECT id_prod, cod_prod, desc_prod, categoria.nome_cat, qtd_prod, forn_prod FROM produto, categoria WHERE produto.id_cat_prod = categoria.id_cat ORDER BY cod_prod";
                         $busca = mysqli_query($conexao,$sql);
 
                         while ($array = mysqli_fetch_array($busca)) {
                             $id_prod = $array['id_prod'];
                             $cod_prod = $array['cod_prod'];
                             $desc_prod = $array['desc_prod'];
-                            $cat_prod = $array['cat_prod'];
+                            $nome_cat = $array['nome_cat'];
                             $qtd_prod = $array['qtd_prod'];
                             $forn_prod = $array['forn_prod'];
                     ?>
             <tr>
                 <td><?php echo $cod_prod ?></td>
                 <td><?php echo $desc_prod ?></td>
-                <td><?php echo $cat_prod ?></td>
+                <td><?php echo $nome_cat ?></td>
                 <td><?php echo $qtd_prod ?></td>
                 <td><?php echo $forn_prod ?></td>
                 <td>
