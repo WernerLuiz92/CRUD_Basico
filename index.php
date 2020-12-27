@@ -67,10 +67,12 @@
                 </select>
             </div>
             <!--Fim form-group -->
-            <div class="botoes" style="text-align: right;">
-                <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i>&nbsp;Salvar</button>
-                <a class="btn btn-danger btn-sm" href="index.php" role="button"><i class="fas fa-eraser"></i>&nbsp;Limpar</a>
+            <div class="botoes" style="text-align: left; width: 49%; float: left;">
                 <a class="btn btn-sm btn-primary" href="_listar_produto.php" role="button"><i class="fas fa-list"></i>&nbsp;Listar Produtos</a>
+            </div><!--
+            --><div class="botoes" style="text-align: right; width: 49%; float: right;">
+                <a class="btn btn-danger btn-sm" href="index.php" role="button"><i class="fas fa-eraser"></i>&nbsp;Limpar</a>
+                <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i>&nbsp;Salvar</button>
             </div>
             <!--Fim botoes -->
 
