@@ -7,7 +7,7 @@
     <title>Formulário de Cadastro</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+    <script src="https://kit.fontawesome.com/8b054ccba1.js" crossorigin="anonymous"></script>
     <style>
     #tamanhoContainer {
         width: 500px;
@@ -38,7 +38,7 @@
             <div class="form-group">
                 <label>Descrição</label>
                 <input type="text" class="form-control" name="descprod" placeholder="Insira o nome do produto"
-                    autocomplete="off">
+                    autocomplete="off" required>
             </div>
             <!--Fim form-group -->
             <div class="form-group">
@@ -54,7 +54,7 @@
             <!--Fim form-group -->
             <div class="form-group">
                 <label>Quantidade</label>
-                <input type="number" class="form-control" name="qtdprod" placeholder="Insira a quantidade">
+                <input type="number" class="form-control" name="qtdprod" placeholder="Insira a quantidade" required>
             </div>
             <!--Fim form-group -->
             <div class="form-group">
@@ -68,8 +68,9 @@
             </div>
             <!--Fim form-group -->
             <div class="botoes" style="text-align: right;">
-                <button type="submit" id="botao1" class="btn btn-sm">Salvar</button>
-                <button type="submit" id="botao2" class="btn btn-sm">Limpar</button>
+                <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-save"></i>&nbsp;Salvar</button>
+                <a class="btn btn-danger btn-sm" href="index.php" role="button"><i class="fas fa-eraser"></i>&nbsp;Limpar</a>
+                <a class="btn btn-sm btn-primary" href="_listar_produto.php" role="button"><i class="fas fa-list"></i>&nbsp;Listar Produtos</a>
             </div>
             <!--Fim botoes -->
 
