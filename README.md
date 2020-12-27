@@ -31,11 +31,13 @@
 
 ## Sobre o Projeto
 
-Trata-se de um sistema de CRUD, projetado com o intuíto de por em pratica os conhecimentos adquiridos durante o curso ministrado pelo professor Ricardo Milbrath Gonçalves.
+Trata-se de um sistema de CRUD, projetado com o intuíto de por em pratica os conhecimentos adquiridos durante o curso.
+
+A proposta é um sistema de controle de estoque, com controle de usuários e níveis de acesso.
 
 ### _Definição de CRUD_
 
-CRUD é uma abreviação das iniciais de _Create_, _Read_, _Update_ e _Delete_. Que são as funcionalidades básicas principais de um sistema de software.
+CRUD é uma abreviação das iniciais de **Create**, **Read**, **Update** e **Delete**. Que são as funcionalidades básicas principais de um sistema de software.
 
 Este projeto foi proposto durante o curso _CRUD Básico com Bootstrap 4 , PHP e MySQL_, criado pelo professor [Ricardo Milbrath Gonçalves](https://www.udemy.com/course/curso-basico-de-bootstrap-4-php-e-mysql-gratis/).
 
