@@ -29,7 +29,7 @@
         <form action="_inserir_categoria.php" method="post" style="margin-top: 20px;">
             <div class="form-group">
                 <label>Cód.</label>
-                <input type="number" class="form-control" name="cod_cat" value="<?php echo $cod_cat + 1; ?>" required>
+                <input type="number" class="form-control" name="cod_cat" value="<?php echo $cod_cat + 1; ?>">
             </div>
             <div class="form-group">
                 <label>Nome</label>
