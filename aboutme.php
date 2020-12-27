@@ -1,8 +1,8 @@
+<?php include '_session.php'; ?>
 <!-- Code -->
 <?php
 
-    include '_session.php';
-    //include '_conexao.php';
+    include '_conexao.php';
 
 ?>
 <!-- Code End -->

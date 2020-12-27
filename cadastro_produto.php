@@ -1,7 +1,7 @@
+<?php include '_session.php'; ?>
 <!-- Code -->
 <?php
 
-    include '_session.php';
     include '_conexao.php';
 
     $sql1 = "SELECT MAX(cod_prod) as cod_prod FROM produto";
