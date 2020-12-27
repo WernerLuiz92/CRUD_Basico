@@ -39,7 +39,7 @@ A proposta é um sistema de controle de estoque, com controle de usuários e ní
 
 CRUD é uma abreviação das iniciais de **Create**, **Read**, **Update** e **Delete**. Que são as funcionalidades básicas principais de um sistema de software.
 
-Este projeto foi proposto durante o curso _CRUD Básico com Bootstrap 4 , PHP e MySQL_, criado pelo professor [Ricardo Milbrath Gonçalves](https://www.udemy.com/course/curso-basico-de-bootstrap-4-php-e-mysql-gratis/).
+Este projeto foi proposto durante o curso _**CRUD Básico com Bootstrap 4 , PHP e MySQL**_, criado pelo professor [Ricardo Milbrath Gonçalves](https://www.udemy.com/course/curso-basico-de-bootstrap-4-php-e-mysql-gratis/).
 
 ## Tecnologias Utilizadas
 
@@ -52,10 +52,10 @@ Este projeto foi proposto durante o curso _CRUD Básico com Bootstrap 4 , PHP e 
 
 - ### _Pré-requisitos_
 
-  - É _necessário_ possuir o **[Node.js](https://nodejs.org/en/)** instalado no computador.
-  - É _necessário_ possuir o **[Git](https://git-scm.com/)** instalado e configurado no computador.
-  - Também, é _preciso_ ter um gerenciador de pacotes seja o **[Yarn](https://yarnpkg.com/)** ou **[NPM](https://www.npmjs.com/)**.
-  - Por fim, é _essencial_ ter o **[MySQL](https://www.mysql.com/)** instalado na máquina.
+  - É _**necessário**_ possuir o **[Node.js](https://nodejs.org/en/)** instalado no computador.
+  - É _**necessário**_ possuir o **[Git](https://git-scm.com/)** instalado e configurado no computador.
+  - Também, é _**preciso**_ ter um gerenciador de pacotes seja o **[Yarn](https://yarnpkg.com/)** ou **[NPM](https://www.npmjs.com/)**.
+  - Por fim, é _**essencial**_ ter o **[MySQL](https://www.mysql.com/)** instalado na máquina.
 
 1. Faça um clone do repositório:
 
@@ -88,8 +88,7 @@ Este projeto foi proposto durante o curso _CRUD Básico com Bootstrap 4 , PHP e 
 ## Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.<br />
-<img alt="License" src="https://img.shields.io/github/license/WernerLuiz92/URL_Shortener_Pitu?style=for-the-badge">
 
 ---
 
-<sup>Projeto desenvolvido com a tutoria de [Luiz Duarte](https://github.com/luiztools), da [LuizTools](https://www.luiztools.com.br).</sup>
+<sup>Projeto desenvolvido com a tutoria de [Ricardo Milbrath Gonçalves](https://ricardomilbrath.com.br/), na [Udemy](https://www.udemy.com/user/ricardomilbrathgonalves/).</sup>
