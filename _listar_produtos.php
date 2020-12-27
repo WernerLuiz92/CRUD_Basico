@@ -7,6 +7,7 @@
     <title>Lista de Produtos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8b054ccba1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,6 +22,7 @@
                     <th scope="col">Categoria</th>
                     <th scope="col">Quantidade</th>
                     <th scope="col">Fornecedor</th>
+                    <th scope="col">Ação</th>
                 </tr>
             </thead>
             <?php
@@ -42,6 +44,12 @@
                 <td><?php echo $cat_prod ?></td>
                 <td><?php echo $qtd_prod ?></td>
                 <td><?php echo $forn_prod ?></td>
+                <td>
+                    <a class="btn btn-sm btn-outline-warning" href="_editar_produto.php?id=<?php echo $id_prod ?>"
+                        role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
+                    <a class="btn btn-sm btn-outline-danger" href="_excluir_produto.php?id=<?php echo $id_prod ?>"
+                        role="button"><i class="far fa-trash-alt"></i>&nbsp;Excluir</a>
+                </td>
                 <?php
                         }
                     ?>
