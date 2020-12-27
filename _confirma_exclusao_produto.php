@@ -35,6 +35,17 @@ $id = $_GET['id'];
 <body>
     <div class="container" id="tamanhoContainer" style="margin-top: 40px;">
         <center>
+            <div class="container" style="width: 500px;">
+                <a class="btn btn-sm btn-primary" href="index.php" role="button"><i
+                        class="fas fa-bars"></i>&nbsp;Menu</a>
+                <a class="btn btn-sm btn-primary" href="_cadastro_produto.php" role="button"><i
+                        class="fas fa-pencil-alt"></i>&nbsp;Cadastro</a>
+                <a class="btn btn-sm btn-primary" href="_listar_produto.php" role="button"><i
+                        class="fas fa-list"></i>&nbsp;Listar Produtos</a>
+            </div>
+            <div style="margin-top: 20px;"></div>
+        </center>
+        <center>
             <h4>Tem certeza que deseja excluir este produto?</h4>
         </center>
         <form action="_excluir_produto.php" method="post" style="margin-top: 20px;">
@@ -55,7 +66,8 @@ $id = $_GET['id'];
             <div class="form-group">
                 <label>Cód. Produto</label>
                 <input type="number" class="form-control" name="cod_prod" value="<?php echo $cod_prod ?>" disabled>
-                <input type="number" class="form-control" name="id_prod" value="<?php echo $id_prod ?>" style=" display: none;">
+                <input type="number" class="form-control" name="id_prod" value="<?php echo $id_prod ?>"
+                    style=" display: none;">
             </div>
             <!--Fim form-group -->
             <div class="form-group">
@@ -90,7 +102,8 @@ $id = $_GET['id'];
             </div>
             <!--Fim form-group -->
             <div class="botoes" style="text-align: right;">
-                <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-check"></i>&nbsp;Confirmar</button>
+                <button type="submit" class="btn btn-success btn-sm"><i
+                        class="fas fa-check"></i>&nbsp;Confirmar</button>
                 <a class="btn btn-sm btn-primary" href="_listar_produto.php" role="button"><i
                         class="fas fa-long-arrow-alt-left"></i>&nbsp;Voltar</a>
             </div>

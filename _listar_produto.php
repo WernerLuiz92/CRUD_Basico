@@ -12,7 +12,17 @@
 
 <body>
     <div class="container" style="margin-top:40px;">
-        <h3>Lista de Produtos</h3>
+        <center>
+            <div class="container" style="width: 500px; margin-top: 40px;">
+                <a class="btn btn-sm btn-primary" href="index.php" role="button"><i class="fas fa-bars"></i>&nbsp;Menu</a>
+                <a class="btn btn-sm btn-primary" href="_cadastro_produto.php" role="button"><i
+                        class="fas fa-pencil-alt"></i>&nbsp;Cadastro</a>
+                <a class="btn btn-sm btn-primary active" href="#" role="button" aria-pressed="true"><i
+                        class="fas fa-list"></i>&nbsp;Listar Produtos</a>
+            </div>
+            <div style="margin-top: 20px;"></div>
+        </center>
+        <h3 style="margin-top: 20px;">Lista de Produtos</h3>
         <br />
         <table class="table">
             <thead>
@@ -47,16 +57,15 @@
                 <td>
                     <a class="btn btn-sm btn-outline-warning" href="_editar_produto.php?id=<?php echo $id_prod ?>"
                         role="button"><i class="far fa-edit"></i>&nbsp;Editar</a>
-                    <a class="btn btn-sm btn-outline-danger" href="_confirma_exclusao_produto.php?id=<?php echo $id_prod ?>"
-                        role="button"><i class="far fa-trash-alt"></i>&nbsp;Excluir</a>
+                    <a class="btn btn-sm btn-outline-danger"
+                        href="_confirma_exclusao_produto.php?id=<?php echo $id_prod ?>" role="button"><i
+                            class="far fa-trash-alt"></i>&nbsp;Excluir</a>
                 </td>
                 <?php
                         }
                     ?>
             </tr>
         </table>
-        <a class="btn btn-sm btn-primary" href="index.php" role="button"><i
-                class="fas fa-long-arrow-alt-left"></i>&nbsp;Voltar</a>
     </div>
 
 
